@@ -1,5 +1,8 @@
-
 {
-    "src": "(.*)",
-    "dest": "/home.html"
-}
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "destination": "home.html"
+      }
+    ]
+  }

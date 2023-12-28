@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "/*.html",
+        "src": "/home.html",
         "use": "@now/static"
       }
     ]

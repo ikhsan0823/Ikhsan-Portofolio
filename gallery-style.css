@@ -265,14 +265,14 @@
 }
 .hero .btn-container{
     position: relative;
-    bottom: -50%;
+    bottom: 0%;
     animation: fade-btn .5s linear forwards;
     opacity: 0;
     animation-delay: 2s;
 }
 @keyframes fade-btn{
     0%{
-        bottom: -50px;
+        bottom: 0px;
         opacity: 0;
     }
     100%{

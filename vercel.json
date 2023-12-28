@@ -1,8 +1,9 @@
 {
-    "routes": [
+    "version": 2,
+    "builds": [
       {
-        "source": "(.*)",
-        "destination": "home.html"
+        "src": "home.html",
+        "use": "@now/static"
       }
     ]
-  }
+}

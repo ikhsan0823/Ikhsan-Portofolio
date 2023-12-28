@@ -60,81 +60,37 @@
     justify-content: space-between;
     align-items: center;
     padding-right: 40px;
+    height: 430px;
+}
+.hero .content .div-head h1{
+    font-size: 45px;
+    color: #f9f9f9;
 }
 .hero .content .div-text{
-    width: 40%;
-}
-.hero .content .div-text h1{
-    margin-bottom: 20px;
-    font-size: 45px;
-    color: #fff;
-}
-.hero .content .div-text h4{
-    color: #79ac78;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-.hero .content .div-text h6{
-    color: #618264;
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-.hero .content .div-text p{
-    color: #618264;
-    margin-bottom: 50px;
-    font-size: 18px;
-}
-.hero .content .div-text .right-container p{
-    color: #618264;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-.soc-link{
-    position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
+    width: 50%;
+    padding-left: 20px;
     display: flex;
     flex-direction: column;
 }
-.soc-link a i{
-    font-size: 25px;
-    cursor: pointer;
-    color: #79ac78;
+.div-text .contact-container{
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    transition: .4s;
+    color: #618264;
 }
-.soc-link a i:hover{
-    color: #b0d9b1;
+.div-text .contact-container .icon{
+    font-size: 30px;
+    margin-right: 20px;
 }
-
+.div-text .contact-container .text{
+    font-size: 30px;
+}
 /*animation*/
-.hero .content .div-text h1,
-.hero .content .div-text h4,
-.hero .content .div-text h6,
-.hero .content .div-text p,
-.hero .content .div-text .right-container p,
-.hero .content .div-text .btn{
+.hero .content .div-head h1{
     position: relative;
     top: 50px;
     animation: slide-top .5s linear forwards;
     opacity: 0;
-}
-.hero .content .div-text h1{
-    animation-delay: 0.5s;
-}
-.hero .content .div-text h4{
-    animation-delay: 0.9s;
-}
-.hero .content .div-text h6{
-    animation-delay: 1.2s;
-}
-.hero .content .div-text p,
-.hero .content .div-text .right-container p{
-    animation-delay: 1.4s;
-}
-.hero .content .div-text .btn{
-    animation-delay: 1.8s;
 }
 @keyframes slide-top{
     0%{
@@ -146,36 +102,37 @@
         opacity: 1;
     }
 }
-.hero .content .div-img img{
+.hero .content .div-text .icon{
+    position: relative;
+    left: -50px;
+    animation: slide-left .5s linear forwards;
     opacity: 0;
-    transform: scale(0.8);
-    animation: fade-img .5s linear forwards;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
-@keyframes fade-img{
+@keyframes slide-left{
     0%{
+        left: -50px;
         opacity: 0;
-        transform: scale(0.8);
     }
     100%{
+        left: 0;
         opacity: 1;
-        transform: scale(1);
     }
 }
-.hero .soc-link a{
+.hero .content .div-text .text{
     position: relative;
-    right: 0px;
+    right: -50px;
     animation: slide-right .5s linear forwards;
-    animation-delay: 2s;
     opacity: 0;
+    animation-delay: 1s;
 }
 @keyframes slide-right{
     0%{
-        right: 0px;
+        right: -50px;
         opacity: 0;
     }
     100%{
-        right: 10px;
+        right: 0;
         opacity: 1;
     }
 }

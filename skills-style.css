@@ -64,19 +64,17 @@
 .hero .content .div-text{
     width: 40%;
 }
+.hero .content .div-text img{
+    width: 250px;
+}
 .hero .content .div-text h1{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 45px;
-    color: #fff;
+    color: #f9f9f9;
 }
 .hero .content .div-text h4{
     color: #79ac78;
     font-size: 24px;
-    margin-bottom: 10px;
-}
-.hero .content .div-text h6{
-    color: #618264;
-    font-size: 18px;
     margin-bottom: 10px;
 }
 .hero .content .div-text p{
@@ -87,7 +85,10 @@
 .hero .content .div-text .right-container p{
     color: #618264;
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 18px;
+}
+.hero .content .div-text .right-container i{
+    margin-right: 5px;
 }
 .soc-link{
     position: absolute;
@@ -109,32 +110,11 @@
 }
 
 /*animation*/
-.hero .content .div-text h1,
-.hero .content .div-text h4,
-.hero .content .div-text h6,
-.hero .content .div-text p,
-.hero .content .div-text .right-container p,
-.hero .content .div-text .btn{
+.hero .content .div-text h1{
     position: relative;
     top: 50px;
     animation: slide-top .5s linear forwards;
     opacity: 0;
-}
-.hero .content .div-text h1{
-    animation-delay: 0.5s;
-}
-.hero .content .div-text h4{
-    animation-delay: 0.9s;
-}
-.hero .content .div-text h6{
-    animation-delay: 1.2s;
-}
-.hero .content .div-text p,
-.hero .content .div-text .right-container p{
-    animation-delay: 1.4s;
-}
-.hero .content .div-text .btn{
-    animation-delay: 1.8s;
 }
 @keyframes slide-top{
     0%{
@@ -146,11 +126,11 @@
         opacity: 1;
     }
 }
-.hero .content .div-img img{
+.hero .content .div-text img{
     opacity: 0;
     transform: scale(0.8);
     animation: fade-img .5s linear forwards;
-    animation-delay: 2s;
+    animation-delay: 0.5s;
 }
 @keyframes fade-img{
     0%{
@@ -160,6 +140,32 @@
     100%{
         opacity: 1;
         transform: scale(1);
+    }
+}
+.hero .content .div-text .right-container h4,
+.hero .content .div-text .right-container i,
+.hero .content .div-text .right-container p{
+    position: relative;
+    opacity: 0;
+    left: -50px;
+    top: 0;
+    animation: slide-left .5s linear forwards;
+}
+.hero .content .div-text .right-container h4,
+.hero .content .div-text .right-container i{
+    animation-delay: 0.9s;
+}
+.hero .content .div-text .right-container p{
+    animation-delay: 1.4s;
+}
+@keyframes slide-left{
+    0%{
+        opacity: 0;
+        left: -50px;
+    }
+    100%{
+        opacity: 1;
+        left: 0;
     }
 }
 .hero .soc-link a{

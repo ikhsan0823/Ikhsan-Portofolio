@@ -55,39 +55,79 @@
 .hero nav .nav-links a.active{
     color: #79ac78;
 }
-.hero .content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 40px;
-}
-.hero .content .div-text{
-    width: 40%;
-}
-.hero .content .div-text h1{
-    margin-bottom: 20px;
+.hero .bab h1{
+    margin-bottom: 10px;
     font-size: 45px;
-    color: #fff;
+    color: #f9f9f9;
 }
-.hero .content .div-text h4{
+.hero .bab h4{
     color: #79ac78;
     font-size: 24px;
     margin-bottom: 10px;
 }
-.hero .content .div-text h6{
+.hero .bab i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.hero .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 20px;
+}
+.hero .content .div-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 250px;
+    padding: 10px 30px 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+    background-color: #b0d9b1;
+    border: 2px solid #f9f9f9;
+    cursor: pointer;
+    animation: 2s linear;
+}
+.hero .content .div-text:hover{
+    transform: scale(1.05);
+}
+.hero .content .div-text img{
+    width: 100%;
+}
+.hero .content .div-text h4{
     color: #618264;
-    font-size: 18px;
+    text-align: center;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 .hero .content .div-text p{
     color: #618264;
-    margin-bottom: 50px;
-    font-size: 18px;
-}
-.hero .content .div-text .right-container p{
-    color: #618264;
+    align-self: flex-start;
     margin-bottom: 10px;
-    font-size: 14px;
+    margin-top: 5px;
+    font-size: 12px;
+}
+.hero .content .div-text i{
+    margin-right: 5px;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn-container .btn{
+    padding: 15px 20px;
+    background-color: #79ac78;
+    border: 2px solid #79ac78;
+    color: #f9f9f9;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-container .btn:hover{
+    color: #79ac78;
+    transition: 0.3s;
+    background-color: transparent;
 }
 .soc-link{
     position: absolute;
@@ -109,32 +149,18 @@
 }
 
 /*animation*/
-.hero .content .div-text h1,
-.hero .content .div-text h4,
-.hero .content .div-text h6,
-.hero .content .div-text p,
-.hero .content .div-text .right-container p,
-.hero .content .div-text .btn{
+.hero .bab h1,
+.hero .bab h4{
     position: relative;
     top: 50px;
     animation: slide-top .5s linear forwards;
     opacity: 0;
 }
-.hero .content .div-text h1{
+.hero .bab h1{
     animation-delay: 0.5s;
 }
-.hero .content .div-text h4{
+.hero .bab h4{
     animation-delay: 0.9s;
-}
-.hero .content .div-text h6{
-    animation-delay: 1.2s;
-}
-.hero .content .div-text p,
-.hero .content .div-text .right-container p{
-    animation-delay: 1.4s;
-}
-.hero .content .div-text .btn{
-    animation-delay: 1.8s;
 }
 @keyframes slide-top{
     0%{
@@ -143,6 +169,40 @@
     }
     100%{
         top: 0;
+        opacity: 1;
+    }
+}
+.hero .content .div-text{
+    position: relative;
+    left: -50px;
+    animation: slide-left .5s linear forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+@keyframes slide-left{
+    0%{
+        left: -50px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+.btn-container .btn{
+    position: relative;
+    bottom: -50px;
+    animation: slide-bottom .5s linear forwards;
+    opacity: 0;
+    animation-delay: 1.8s;
+}
+@keyframes slide-bottom{
+    0%{
+        bottom: -50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
         opacity: 1;
     }
 }

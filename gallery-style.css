@@ -1,0 +1,299 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background-color: #b0d9b1;
+}
+.container .hero{
+    position: relative;
+    z-index: 10;
+    height: 85vh;
+    width: 75%;
+    background-color: rgba(225, 225, 225, 0.1);
+    backdrop-filter: blur(25px);
+    border: 3px solid #b0d9b1;
+    border-radius: 20px;
+    box-shadow: -15px 17px 17px rgba(10, 10, 10, 0.15);
+    padding: 0 40px 0 80px;
+}
+.hero nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+
+}
+.hero nav .logo{
+    width: 100px;
+}
+.hero nav .nav-links a{
+    color: #242424;
+    margin-left: 40px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+.hero nav .nav-links a:hover,
+.hero nav .nav-links a.active{
+    color: #79ac78;
+}
+.hero .bab h1{
+    margin-bottom: 10px;
+    font-size: 45px;
+    color: #f9f9f9;
+}
+.hero .bab h4{
+    color: #79ac78;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.hero .bab i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.hero .title-act{
+    color: #618264;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.hero .content{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.content i{
+    height: 40px;
+    width: 40px;
+    background-color: #f9f9f9;
+    color: #b0d9b1;
+    border-radius: 50%;
+    line-height: 40px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    font-size: 1.25rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.content i:first-child{
+    left: -22px;
+}
+.content i:last-child{
+    right: -22px;
+}
+.content .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+.content .carousel::-webkit-scrollbar{
+    display: none;
+}
+.carousel.dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+.carousel.no-transition{
+    scroll-behavior: auto;
+}
+.carousel.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.carousel .card{
+    scroll-snap-align: start;
+    height: 250px;
+    list-style: none;
+    background: #b0d9b1;
+    border: 2px solid #f9f9f9;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.card i{
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    color: #618264;
+}
+.card p{
+    color: #618264;
+    font-size: 16px
+}
+.card .img img{
+    width: 220px;
+    height: fit-content;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.btn-container .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 80px;
+    background-color: #79ac78;
+    border: 2px solid #79ac78;
+    color: #f9f9f9;
+    border-radius: 5px;
+    font-weight: bold;
+    height: 40px;
+}
+.btn-container .btn:hover{
+    color: #79ac78;
+    transition: 0.3s;
+    background-color: transparent;
+}
+.soc-link{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+.soc-link a i{
+    font-size: 25px;
+    cursor: pointer;
+    color: #79ac78;
+    margin-bottom: 20px;
+    transition: .4s;
+}
+.soc-link a i:hover{
+    color: #f9f9f9;
+}
+
+/*animation*/
+.hero .bab h1{
+    position: relative;
+    top: 50px;
+    animation: slide-top .5s linear forwards;
+    opacity: 0;
+}
+@keyframes slide-top{
+    0%{
+        top: 50px;
+        opacity: 0;
+    }
+    100%{
+        top: 0;
+        opacity: 1;
+    }
+}
+.hero .bab h4{
+    position: relative;
+    left: -50px;
+    animation: recent-slide .5s linear forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+}
+@keyframes recent-slide{
+    0%{
+        left: -50px;
+        opacity: 0;
+    }
+    100%{
+        left: 0;
+        opacity: 1;
+    }
+}
+.hero .title-act{
+    position: relative;
+    right: -50px;
+    animation: title-slide .5s linear forwards;
+    animation-delay: 0.8s;
+    opacity: 0;
+}
+@keyframes title-slide{
+    0%{
+        right: -50px;
+        opacity: 0;
+    }
+    100%{
+        right: 0;
+        opacity: 1;
+    }
+}
+.hero .content{
+    position: relative;
+    transform: scale(0.8);
+    animation: fade-content .5s linear forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+@keyframes fade-content{
+    0%{
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.hero .btn-container{
+    position: relative;
+    bottom: -50%;
+    animation: fade-btn .5s linear forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+@keyframes fade-btn{
+    0%{
+        bottom: -50px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
+.hero .soc-link a{
+    position: relative;
+    left: 0px;
+    animation: slide-left .5s linear forwards;
+    animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes slide-left{
+    0%{
+        left: 0px;
+        opacity: 0;
+    }
+    100%{
+        left: 10px;
+        opacity: 1;
+    }
+}

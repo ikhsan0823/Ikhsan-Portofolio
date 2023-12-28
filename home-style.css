@@ -67,7 +67,7 @@
 .hero .content .div-text h1{
     margin-bottom: 20px;
     font-size: 45px;
-    color: #fff;
+    color: #f9f9f9;
 }
 .hero .content .div-text h4{
     color: #79ac78;
@@ -83,7 +83,7 @@
     padding: 15px 20px;
     background-color: #79ac78;
     border: 2px solid #79ac78;
-    color: #fff;
+    color: #f9f9f9;
     border-radius: 5px;
     font-weight: bold;
 }

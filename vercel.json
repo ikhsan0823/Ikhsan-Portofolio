@@ -2,15 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "/home.html",
+        "src": "/*.html",
         "use": "@now/static"
       },
       {
-        "src": "/home.css",
+        "src": "/*.css",
         "use": "@now/static"
       },
       {
-        "src": "/home.js",
+        "src": "/*.js",
         "use":"@now/static"
       }
     ]

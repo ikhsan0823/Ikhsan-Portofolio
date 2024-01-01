@@ -208,14 +208,13 @@
         height: 100%;
         background-color: #f9f9f9;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     .container:before{
         content: '';
         position: absolute;
-        height: 100%;
+        height: 50%;
         width: 100%;
         top: 0;
         left: 0;
@@ -250,5 +249,8 @@
     .hero .content .div-img{
         width: 100%;
         margin-bottom: 50px;
+    }
+    .hero .content .div-text h1{
+        color: #618264;
     }
 }

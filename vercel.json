@@ -1,7 +1,1 @@
-
-{ 
-    "build": [
-        { "source": "*.html", "use": "@vercel/static" }
-    ],
-    "rewrites": [{ "source": "/(.*)", "destination": "home.html" }] 
-}
+{ "rewrites": [{ "source": "/(.*)", "destination": "home.html" }] }

@@ -1,3 +1,9 @@
 RewriteEngine On
+
+# Untuk file home.html
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule ^home$ home.html [NC,L]
+
+# Untuk file about.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^about$ about.html [NC,L]

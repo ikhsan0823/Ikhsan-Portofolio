@@ -1,9 +1,7 @@
-RewriteEngine On
-
-# Untuk file home.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^home$ home.html [NC,L]
-
-# Untuk file about.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^about$ about.html [NC,L]
+RewriteEngine on
+ # redirect /home.html to /home
+ RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+ RewriteRule ^ /%1 [NE,L,R]
+ # now we will internally map /home to/ home.html
+ RewriteCond %{REQUEST_FILENAME}.html -f
+ RewriteRule ^(.*)/?$ /$1.html  [L]
